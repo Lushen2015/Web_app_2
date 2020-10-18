@@ -1,1 +1,22 @@
-<h1 class="title">Student Central<h1>
+<h1 class="title">Student Central</h1>
+
+<section class= "section">
+    <div class="container">
+        <% @tickets.each do |ticket| %> 
+            <div class="card">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content">
+                            <p class="student_id is-4"><%= link_to ticket.student_id, ticket %></p>
+                        </div> 
+                    </div>
+
+                    <div class="content">
+                        <%= ticket.fault%>
+                    </div>
+
+                </div>
+            </div>   
+        <%end%>     
+    </div>
+</section>
