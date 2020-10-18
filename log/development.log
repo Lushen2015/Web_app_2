@@ -129,3 +129,169 @@ Processing by TicketsController#index as HTML
 Completed 200 OK in 1049ms (Views: 1044.5ms | ActiveRecord: 0.0ms | Allocations: 123048)
 
 
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (89.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (77.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTickets (20201018192059)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "tickets" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "student_id" varchar, "fault" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201018192059"]]
+  [1m[35m (72.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-18 19:29:56.918072"], ["updated_at", "2020-10-18 19:29:56.918072"]]
+  [1m[35m (74.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at C:/Ruby26-x64/bin/rake:23)
+Started GET "/tickets/new" for 127.0.0.1 at 2020-10-18 21:41:17 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+SyntaxError - syntax error, unexpected end-of-input, expecting end:
+  app/controllers/tickets_controller.rb:39:in `'
+
+Started POST "/__better_errors/4be5a3a82e777117/variables" for 127.0.0.1 at 2020-10-18 21:41:17 +0200
+Started GET "/tickets/new" for 127.0.0.1 at 2020-10-18 21:41:50 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TicketsController#new as HTML
+Completed 406 Not Acceptable in 16ms (ActiveRecord: 0.7ms | Allocations: 6178)
+
+
+
+ActionController::MissingExactTemplate - TicketsController#new is missing a template for request formats: text/html:
+
+Started POST "/__better_errors/bbb4d6f5161088da/variables" for 127.0.0.1 at 2020-10-18 21:41:51 +0200
+Started GET "/tickets/new" for 127.0.0.1 at 2020-10-18 22:01:01 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TicketsController#new as HTML
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 316.1ms | Allocations: 19180)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 387ms (Views: 375.0ms | ActiveRecord: 0.0ms | Allocations: 25970)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2020-10-18 22:01:15 +0200
+Processing by TicketsController#new as HTML
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 5653)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 63.9ms | ActiveRecord: 0.0ms | Allocations: 12422)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2020-10-18 22:01:25 +0200
+Processing by TicketsController#new as HTML
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 5653)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 65.4ms | ActiveRecord: 0.0ms | Allocations: 12409)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2020-10-18 22:02:24 +0200
+Processing by TicketsController#new as HTML
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 11.0ms | Allocations: 5652)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 72ms (Views: 69.2ms | ActiveRecord: 0.0ms | Allocations: 12412)
+
+
+Started POST "/tickets" for 127.0.0.1 at 2020-10-18 22:04:12 +0200
+Processing by TicketsController#create as HTML
+  Parameters: {"authenticity_token"=>"VF0dWtC6EoVpGOqA9PLpa+ByIbeK/GtbdhTNgsr+Bpbe+5O/UiAF3dOTrCjzndyosr0CH22DC6r7EKCeAijALg==", "ticket"=>{"student_id"=>"Lushen", "fault"=>"The lights are not working"}, "commit"=>"Log a new ticket"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 690)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: tickets:
+  app/controllers/tickets_controller.rb:36:in `ticket_params'
+  app/controllers/tickets_controller.rb:13:in `create'
+
+Started POST "/__better_errors/46c6bcf6284e1c27/variables" for 127.0.0.1 at 2020-10-18 22:04:12 +0200
+Started POST "/__better_errors/46c6bcf6284e1c27/variables" for 127.0.0.1 at 2020-10-18 22:04:26 +0200
+Started GET "/tickets/new" for 127.0.0.1 at 2020-10-18 22:05:17 +0200
+Processing by TicketsController#new as HTML
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 5672)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 53.8ms | ActiveRecord: 0.0ms | Allocations: 12461)
+
+
+Started POST "/tickets" for 127.0.0.1 at 2020-10-18 22:05:22 +0200
+Processing by TicketsController#create as HTML
+  Parameters: {"authenticity_token"=>"CC3Za7pnYCkHn28itvb/un4GZllyMztKUvQqWc26G4aCi1eOOP13cb0UKYqxmcp5LMlF8ZVMW7vf8EdFBWzdPg==", "ticket"=>{"student_id"=>"Lushen", "fault"=>"srdgfffrdsefg"}, "commit"=>"Log a new ticket"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 680)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: tickets:
+  app/controllers/tickets_controller.rb:36:in `ticket_params'
+  app/controllers/tickets_controller.rb:13:in `create'
+
+Started POST "/__better_errors/e607bebfb87d8d81/variables" for 127.0.0.1 at 2020-10-18 22:05:22 +0200
+Started POST "/__better_errors/e607bebfb87d8d81/variables" for 127.0.0.1 at 2020-10-18 22:05:29 +0200
+Started POST "/tickets" for 127.0.0.1 at 2020-10-18 22:06:22 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TicketsController#create as HTML
+  Parameters: {"authenticity_token"=>"CC3Za7pnYCkHn28itvb/un4GZllyMztKUvQqWc26G4aCi1eOOP13cb0UKYqxmcp5LMlF8ZVMW7vf8EdFBWzdPg==", "ticket"=>{"student_id"=>"Lushen", "fault"=>"srdgfffrdsefg"}, "commit"=>"Log a new ticket"}
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms | Allocations: 967)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: tickets:
+  app/controllers/tickets_controller.rb:36:in `ticket_params'
+  app/controllers/tickets_controller.rb:13:in `create'
+
+Started POST "/__better_errors/e670e8b9b3c13fc7/variables" for 127.0.0.1 at 2020-10-18 22:06:22 +0200
+Started GET "/" for 127.0.0.1 at 2020-10-18 22:06:29 +0200
+Processing by TicketsController#index as HTML
+  Rendering tickets/index.html.erb within layouts/application
+  Rendered tickets/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 49.0ms | ActiveRecord: 0.0ms | Allocations: 6340)
+
+
+Started GET "/tickets/" for 127.0.0.1 at 2020-10-18 22:06:34 +0200
+Processing by TicketsController#index as HTML
+  Rendering tickets/index.html.erb within layouts/application
+  Rendered tickets/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 50.9ms | ActiveRecord: 0.0ms | Allocations: 5947)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2020-10-18 22:06:40 +0200
+Processing by TicketsController#new as HTML
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 5673)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 46.2ms | ActiveRecord: 0.8ms | Allocations: 15140)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2020-10-18 22:07:39 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TicketsController#new as HTML
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 5660)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 53.3ms | ActiveRecord: 0.7ms | Allocations: 15544)
+
+
+Started POST "/tickets" for 127.0.0.1 at 2020-10-18 22:07:42 +0200
+Processing by TicketsController#create as HTML
+  Parameters: {"authenticity_token"=>"0I7uKQX2WbnPMkrwFmqtRDeHMcn1fDYYECRvk1s2uZ5aKGDMh2xO4XW5DFgRBZiHZUgSYRIDVumdIAKPk+B/Jg==", "ticket"=>{"student_id"=>"Lushen", "fault"=>"asdasds"}, "commit"=>"Log a new ticket"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tickets_controller.rb:15:in `create'
+  [1m[36mTicket Create (2.0ms)[0m  [1m[32mINSERT INTO "tickets" ("student_id", "fault", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["student_id", "Lushen"], ["fault", "asdasds"], ["created_at", "2020-10-18 20:07:42.839217"], ["updated_at", "2020-10-18 20:07:42.839217"]]
+  ↳ app/controllers/tickets_controller.rb:15:in `create'
+  [1m[35m (102.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tickets_controller.rb:15:in `create'
+Redirected to http://127.0.0.1:3000/tickets/1
+Completed 302 Found in 114ms (ActiveRecord: 104.5ms | Allocations: 2963)
+
+
+Started GET "/tickets/1" for 127.0.0.1 at 2020-10-18 22:07:42 +0200
+
+AbstractController::ActionNotFound - The action 'show' could not be found for TicketsController:
+
+Started POST "/__better_errors/4029da0546971bf6/variables" for 127.0.0.1 at 2020-10-18 22:07:43 +0200
