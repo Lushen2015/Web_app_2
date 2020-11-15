@@ -748,3 +748,60 @@ Processing by TicketsController#new as HTML
 Completed 200 OK in 59ms (Views: 58.8ms | ActiveRecord: 0.0ms | Allocations: 11285)
 
 
+Started GET "/tickets/new" for 127.0.0.1 at 2020-11-15 18:05:32 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TicketsController#new as HTML
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 5651)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 64.0ms | ActiveRecord: 0.0ms | Allocations: 12577)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-15 18:05:39 +0200
+Processing by TicketsController#index as HTML
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY created_at DESC[0m
+  ↳ app/views/tickets/index.html.erb:6
+  Rendered tickets/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1027)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 53.3ms | ActiveRecord: 0.2ms | Allocations: 7202)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-15 18:05:55 +0200
+Processing by TicketsController#index as HTML
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY created_at DESC[0m
+  ↳ app/views/tickets/index.html.erb:6
+  Rendered tickets/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1022)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 66.5ms | ActiveRecord: 0.2ms | Allocations: 8049)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-15 18:06:03 +0200
+Processing by TicketsController#index as HTML
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY created_at DESC[0m
+  ↳ app/views/tickets/index.html.erb:6
+  Rendered tickets/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 832)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 51.5ms | ActiveRecord: 0.2ms | Allocations: 6851)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-15 18:06:06 +0200
+Processing by TicketsController#index as HTML
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.4ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY created_at DESC[0m
+  ↳ app/views/tickets/index.html.erb:6
+  Rendered tickets/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 830)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 50.9ms | ActiveRecord: 0.4ms | Allocations: 6848)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2020-11-15 18:06:07 +0200
+Processing by TicketsController#new as HTML
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 5671)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 52.3ms | ActiveRecord: 0.0ms | Allocations: 11711)
+
+
