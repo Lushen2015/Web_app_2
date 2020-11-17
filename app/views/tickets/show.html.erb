@@ -1,12 +1,29 @@
+<% content_for :page_title, @ticket.student_id %>
+
 <section class="section">
     <div class="container">
-    
-        <h1 class="title">
-            <%= @ticket.student_id %>
-        </h1>
-    
+        <nav class="level">
+            <div class="level-left">
+                <p class="level-item">
+                    <strong>Actions</strong>
+                </p>
+            </div>
+
+            <div class="level-right">
+                <p class="level-item">
+                    <%= link_to "Edit", edit_ticket_path(@ticket), class: "button" %>
+                </p>
+                <p class="level-item">
+                    <%= link_to "Delete", ticket_path(@ticket), method: :delete, data: {confirm: "Are you sure?"}, class: "button is-danger" %>
+                </p>
+            </div>
+        </nav>
+        <hr />
+
         <div class="content">
             <%= @ticket.fault%>
         </div> 
     </div>
 </section>
+
+<section class="comments"></section>

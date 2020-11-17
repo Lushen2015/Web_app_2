@@ -27,6 +27,28 @@ class TicketsController < ApplicationController
         #The ID is usually seen on the browser like "127.0.0.1:3000/tickets/show/45 where 45 is the ID"
     end
 
+    def update
+      @ticket = Ticket.find(params[:id])
+
+      if @ticket.update(ticket_params)
+        redirect_to @ticket
+      else
+        render 'edit'
+      end
+
+    end
+
+    def edit
+      @ticket = Ticket.find(params[:id])
+    end
+
+    def destroy
+      @ticket = Ticket.find(params[:id])
+      @ticket.destroy
+
+      redirect_to root_path
+
+    end
 
     private
     #This is the method, private to this file only I presume, that does a security check and allows you to pass through the specific fields you want to come through to your db
