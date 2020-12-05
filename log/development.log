@@ -3554,3 +3554,700 @@ ActionView::MissingTemplate - Missing partial comments/_comment with {:locale=>[
   app/views/tickets/show.html.erb:32
 
 Started POST "/__better_errors/d62592fc32f075da/variables" for 127.0.0.1 at 2020-11-21 13:13:14 +0200
+Started POST "/__better_errors/d62592fc32f075da/variables" for 127.0.0.1 at 2020-11-21 13:45:28 +0200
+Started GET "/tickets/new" for 127.0.0.1 at 2020-11-21 13:45:29 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TicketsController#new as HTML
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/_form.html.erb (Duration: 7.5ms | Allocations: 6287)
+  Rendered tickets/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 6608)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 96ms (Views: 94.7ms | ActiveRecord: 0.0ms | Allocations: 13764)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-21 13:45:48 +0200
+Processing by TicketsController#index as HTML
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.7ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY created_at DESC[0m
+  ↳ app/views/tickets/index.html.erb:6
+  Rendered tickets/index.html.erb within layouts/application (Duration: 261.5ms | Allocations: 895)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 320ms (Views: 317.8ms | ActiveRecord: 0.7ms | Allocations: 7266)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2020-11-21 13:45:54 +0200
+Processing by TicketsController#new as HTML
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/_form.html.erb (Duration: 12.9ms | Allocations: 5746)
+  Rendered tickets/new.html.erb within layouts/application (Duration: 13.2ms | Allocations: 5820)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 64.9ms | ActiveRecord: 0.0ms | Allocations: 11936)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-21 13:45:56 +0200
+Processing by TicketsController#index as HTML
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY created_at DESC[0m
+  ↳ app/views/tickets/index.html.erb:6
+  Rendered tickets/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 690)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 50.1ms | ActiveRecord: 0.3ms | Allocations: 6916)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-21 13:49:42 +0200
+Processing by TicketsController#index as HTML
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY created_at DESC[0m
+  ↳ app/views/tickets/index.html.erb:6
+  Rendered tickets/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 886)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 54.1ms | ActiveRecord: 0.2ms | Allocations: 8125)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2020-11-21 13:49:44 +0200
+Processing by TicketsController#new as HTML
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/_form.html.erb (Duration: 21.3ms | Allocations: 5937)
+  Rendered tickets/new.html.erb within layouts/application (Duration: 23.1ms | Allocations: 6248)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 86ms (Views: 84.7ms | ActiveRecord: 0.0ms | Allocations: 12499)
+
+
+Started POST "/tickets" for 127.0.0.1 at 2020-11-21 13:49:48 +0200
+Processing by TicketsController#create as HTML
+  Parameters: {"authenticity_token"=>"wf0mV6ph2JRUNYzsyCEIVUAtmyYzU5EPnu8GhuZ2tJUoQMzCIbf2zk8FYUh2GFpdow/SqEbdXJeO5j5Vin4iuA==", "ticket"=>{"student_id"=>"dfgdfgfd", "fault"=>"searfgdfrgbvdffg"}, "commit"=>"Create Ticket"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tickets_controller.rb:16:in `create'
+  [1m[36mTicket Create (1.3ms)[0m  [1m[32mINSERT INTO "tickets" ("student_id", "fault", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["student_id", "dfgdfgfd"], ["fault", "searfgdfrgbvdffg"], ["created_at", "2020-11-21 11:49:48.805877"], ["updated_at", "2020-11-21 11:49:48.805877"]]
+  ↳ app/controllers/tickets_controller.rb:16:in `create'
+  [1m[35m (103.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tickets_controller.rb:16:in `create'
+Redirected to http://127.0.0.1:3000/tickets/17
+Completed 302 Found in 117ms (ActiveRecord: 104.8ms | Allocations: 2908)
+
+
+Started GET "/tickets/17" for 127.0.0.1 at 2020-11-21 13:49:48 +0200
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:26:in `show'
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 17]]
+  ↳ app/views/tickets/show.html.erb:31
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 17]]
+  ↳ app/views/tickets/show.html.erb:32
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 12.1ms | Allocations: 6242)
+  Rendered tickets/show.html.erb within layouts/application (Duration: 18.7ms | Allocations: 8406)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 70ms (Views: 65.8ms | ActiveRecord: 0.5ms | Allocations: 15227)
+
+
+Started POST "/tickets/17/comments" for 127.0.0.1 at 2020-11-21 13:49:52 +0200
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"aUqYnrgQoTg/wtVT4N8vTTpsgAKbjxaWqnk4yDGl68yv23Tb/kN5KVPJVdPqhnL+qN2xnJHoYvs+OWuMQ98iSg==", "comment"=>{"name"=>"zdsfgdfgvb", "comment"=>"afsgdfgdf"}, "commit"=>"Create Comment", "ticket_id"=>"17"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:6:in `create'
+  [1m[36mComment Create (1.1ms)[0m  [1m[32mINSERT INTO "comments" ("name", "comment", "created_at", "updated_at", "ticket_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "zdsfgdfgvb"], ["comment", "afsgdfgdf"], ["created_at", "2020-11-21 11:49:52.851434"], ["updated_at", "2020-11-21 11:49:52.851434"], ["ticket_id", 17]]
+  ↳ app/controllers/comments_controller.rb:6:in `create'
+  [1m[35m (102.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/tickets/17
+Completed 302 Found in 123ms (ActiveRecord: 104.2ms | Allocations: 3727)
+
+
+Started GET "/tickets/17" for 127.0.0.1 at 2020-11-21 13:49:53 +0200
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:26:in `show'
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 17]]
+  ↳ app/views/tickets/show.html.erb:31
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 17]]
+  ↳ app/views/tickets/show.html.erb:32
+  Rendered tickets/show.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2967)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms | Allocations: 3987)
+
+
+
+ActionView::MissingTemplate - Missing partial comments/_comment with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "L:/Desktop/GitHub/Web_app_2/app/views"
+  * "C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views"
+  * "C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionmailbox-6.0.3.4/app/views":
+  app/views/tickets/show.html.erb:32
+
+Started POST "/__better_errors/004f3798739b823c/variables" for 127.0.0.1 at 2020-11-21 13:49:53 +0200
+Started GET "/tickets/17" for 127.0.0.1 at 2020-11-21 13:51:37 +0200
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:26:in `show'
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 17]]
+  ↳ app/views/tickets/show.html.erb:31
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 17]]
+  ↳ app/views/tickets/show.html.erb:32
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 5.6ms | Allocations: 3224)
+  Rendered tickets/show.html.erb within layouts/application (Duration: 11.3ms | Allocations: 5363)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.6ms | Allocations: 7121)
+
+
+
+NoMethodError - undefined method `post' for #<Comment:0x000000000c08bd88>:
+  app/views/comments/_comment.html.erb:12
+  app/views/tickets/show.html.erb:32
+
+Started POST "/__better_errors/ff38e37248e821f2/variables" for 127.0.0.1 at 2020-11-21 13:51:37 +0200
+Started GET "/tickets/17" for 127.0.0.1 at 2020-11-21 13:51:49 +0200
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:26:in `show'
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 17]]
+  ↳ app/views/tickets/show.html.erb:31
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 17]]
+  ↳ app/views/tickets/show.html.erb:32
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 3.0ms | Allocations: 3022)
+  Rendered tickets/show.html.erb within layouts/application (Duration: 6.2ms | Allocations: 4776)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms | Allocations: 5796)
+
+
+
+NoMethodError - undefined method `post' for #<Comment:0x0000000008cc4ea0>:
+  app/views/comments/_comment.html.erb:12
+  app/views/tickets/show.html.erb:32
+
+Started POST "/__better_errors/3efb2ac437b726ce/variables" for 127.0.0.1 at 2020-11-21 13:51:49 +0200
+Started GET "/tickets/new" for 127.0.0.1 at 2020-11-21 13:52:53 +0200
+Processing by TicketsController#new as HTML
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/_form.html.erb (Duration: 6.9ms | Allocations: 5952)
+  Rendered tickets/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 6268)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 64ms (Views: 62.1ms | ActiveRecord: 0.0ms | Allocations: 13411)
+
+
+Started POST "/tickets" for 127.0.0.1 at 2020-11-21 13:52:55 +0200
+Processing by TicketsController#create as HTML
+  Parameters: {"authenticity_token"=>"xAodt0+8jH7V6YFkZPYS6/MBobPqSleJwwOChorNORgCm/HyCe9Ub7niAeRur09YYbCQLeAtI+RXQ9HC+Lfwng==", "ticket"=>{"student_id"=>"sdfgsgfd", "fault"=>"sdfsdfsd"}, "commit"=>"Create Ticket"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tickets_controller.rb:16:in `create'
+  [1m[36mTicket Create (1.3ms)[0m  [1m[32mINSERT INTO "tickets" ("student_id", "fault", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["student_id", "sdfgsgfd"], ["fault", "sdfsdfsd"], ["created_at", "2020-11-21 11:52:55.785419"], ["updated_at", "2020-11-21 11:52:55.785419"]]
+  ↳ app/controllers/tickets_controller.rb:16:in `create'
+  [1m[35m (99.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tickets_controller.rb:16:in `create'
+Redirected to http://127.0.0.1:3000/tickets/18
+Completed 302 Found in 106ms (ActiveRecord: 100.4ms | Allocations: 2752)
+
+
+Started GET "/tickets/18" for 127.0.0.1 at 2020-11-21 13:52:55 +0200
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:26:in `show'
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 18]]
+  ↳ app/views/tickets/show.html.erb:31
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 18]]
+  ↳ app/views/tickets/show.html.erb:32
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 5.9ms | Allocations: 6027)
+  Rendered tickets/show.html.erb within layouts/application (Duration: 10.5ms | Allocations: 8174)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 56.5ms | ActiveRecord: 0.4ms | Allocations: 14980)
+
+
+Started POST "/tickets/18/comments" for 127.0.0.1 at 2020-11-21 13:52:59 +0200
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"FWVHjWtmVKPGp23XjZvqmq0jcvQlqSSeFBO3Rs+ryFPT9KvILTWMsqqs7VeHwrcpP5JDai/OUPOAU+QCvdEB1Q==", "comment"=>{"name"=>"sadfsdfs", "comment"=>"sadfsfsfd"}, "commit"=>"Create Comment", "ticket_id"=>"18"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:6:in `create'
+  [1m[36mComment Create (1.2ms)[0m  [1m[32mINSERT INTO "comments" ("name", "comment", "created_at", "updated_at", "ticket_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "sadfsdfs"], ["comment", "sadfsfsfd"], ["created_at", "2020-11-21 11:52:59.171022"], ["updated_at", "2020-11-21 11:52:59.171022"], ["ticket_id", 18]]
+  ↳ app/controllers/comments_controller.rb:6:in `create'
+  [1m[35m (105.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/tickets/18
+Completed 302 Found in 114ms (ActiveRecord: 106.5ms | Allocations: 3725)
+
+
+Started GET "/tickets/18" for 127.0.0.1 at 2020-11-21 13:52:59 +0200
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:26:in `show'
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 18]]
+  ↳ app/views/tickets/show.html.erb:31
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 18]]
+  ↳ app/views/tickets/show.html.erb:32
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 0.6ms | Allocations: 285)
+  Rendered comments/_form.html.erb (Duration: 5.9ms | Allocations: 5832)
+  Rendered tickets/show.html.erb within layouts/application (Duration: 10.7ms | Allocations: 8077)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 58.7ms | ActiveRecord: 0.4ms | Allocations: 14737)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-21 13:53:03 +0200
+Processing by TicketsController#index as HTML
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY created_at DESC[0m
+  ↳ app/views/tickets/index.html.erb:6
+  Rendered tickets/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 973)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 46.7ms | ActiveRecord: 0.3ms | Allocations: 7344)
+
+
+Started GET "/tickets/16" for 127.0.0.1 at 2020-11-21 13:53:04 +0200
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:26:in `show'
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 16]]
+  ↳ app/views/tickets/show.html.erb:31
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 16]]
+  ↳ app/views/tickets/show.html.erb:32
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 0.2ms | Allocations: 123)
+  Rendered comments/_form.html.erb (Duration: 6.3ms | Allocations: 5829)
+  Rendered tickets/show.html.erb within layouts/application (Duration: 10.5ms | Allocations: 7771)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 65.4ms | ActiveRecord: 0.3ms | Allocations: 14434)
+
+
+Started DELETE "/tickets/16" for 127.0.0.1 at 2020-11-21 13:53:07 +0200
+Processing by TicketsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PJSsQ4LFKiSqTnnjD4pptYFpKqkIm2yDUD+IW3PaNyj6BUAGxJbyNcZF+WMF0zQGE9gbNwL8GO7Ef9sfAaD+rg==", "id"=>"16"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:46:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tickets_controller.rb:47:in `destroy'
+  [1m[36mTicket Destroy (1.9ms)[0m  [1m[31mDELETE FROM "tickets" WHERE "tickets"."id" = ?[0m  [["id", 16]]
+  ↳ app/controllers/tickets_controller.rb:47:in `destroy'
+  [1m[35m (97.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tickets_controller.rb:47:in `destroy'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 106ms (ActiveRecord: 99.5ms | Allocations: 2812)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-21 13:53:08 +0200
+Processing by TicketsController#index as HTML
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY created_at DESC[0m
+  ↳ app/views/tickets/index.html.erb:6
+  Rendered tickets/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 736)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 56.0ms | ActiveRecord: 0.2ms | Allocations: 6964)
+
+
+Started GET "/tickets/17" for 127.0.0.1 at 2020-11-21 13:53:09 +0200
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:26:in `show'
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 17]]
+  ↳ app/views/tickets/show.html.erb:31
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 17]]
+  ↳ app/views/tickets/show.html.erb:32
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 0.2ms | Allocations: 119)
+  Rendered comments/_form.html.erb (Duration: 5.5ms | Allocations: 5841)
+  Rendered tickets/show.html.erb within layouts/application (Duration: 9.4ms | Allocations: 7779)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 56.6ms | ActiveRecord: 0.4ms | Allocations: 14429)
+
+
+Started DELETE "/tickets/17" for 127.0.0.1 at 2020-11-21 13:53:11 +0200
+Processing by TicketsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7wurSyQz89fegJDQstd5zjyECT6/EG2m9ySHq7+T0IkpmkcOYmArxrKLEFC4jiR9rjU4oLV3GctjZNTvzekZDw==", "id"=>"17"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:46:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tickets_controller.rb:47:in `destroy'
+  [1m[36mTicket Destroy (1.2ms)[0m  [1m[31mDELETE FROM "tickets" WHERE "tickets"."id" = ?[0m  [["id", 17]]
+  ↳ app/controllers/tickets_controller.rb:47:in `destroy'
+  [1m[35m (86.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tickets_controller.rb:47:in `destroy'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 94ms (ActiveRecord: 88.2ms | Allocations: 2795)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-21 13:53:11 +0200
+Processing by TicketsController#index as HTML
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY created_at DESC[0m
+  ↳ app/views/tickets/index.html.erb:6
+  Rendered tickets/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 690)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 56.8ms | ActiveRecord: 0.2ms | Allocations: 6916)
+
+
+Started GET "/tickets/18" for 127.0.0.1 at 2020-11-21 13:53:12 +0200
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:26:in `show'
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 18]]
+  ↳ app/views/tickets/show.html.erb:31
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 18]]
+  ↳ app/views/tickets/show.html.erb:32
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 0.2ms | Allocations: 119)
+  Rendered comments/_form.html.erb (Duration: 7.2ms | Allocations: 5828)
+  Rendered tickets/show.html.erb within layouts/application (Duration: 11.5ms | Allocations: 7765)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 70ms (Views: 66.6ms | ActiveRecord: 0.5ms | Allocations: 14423)
+
+
+Started DELETE "/tickets/18" for 127.0.0.1 at 2020-11-21 13:53:14 +0200
+Processing by TicketsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Yhf1hgciCvp/NSyfB7pb11xRQMuSDodRJwbb/kzS/oOkhhnDQXHS6xM+rB8N4wZkzuBxVZhp8zyzRoi6Pqg3BQ==", "id"=>"18"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:46:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tickets_controller.rb:47:in `destroy'
+  [1m[36mTicket Destroy (1.0ms)[0m  [1m[31mDELETE FROM "tickets" WHERE "tickets"."id" = ?[0m  [["id", 18]]
+  ↳ app/controllers/tickets_controller.rb:47:in `destroy'
+  [1m[35m (93.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tickets_controller.rb:47:in `destroy'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 100ms (ActiveRecord: 94.8ms | Allocations: 2782)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-21 13:53:14 +0200
+Processing by TicketsController#index as HTML
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY created_at DESC[0m
+  ↳ app/views/tickets/index.html.erb:6
+  Rendered tickets/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 634)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.2ms | Allocations: 6866)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2020-11-21 13:53:31 +0200
+Processing by TicketsController#new as HTML
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/_form.html.erb (Duration: 11.9ms | Allocations: 5743)
+  Rendered tickets/new.html.erb within layouts/application (Duration: 12.3ms | Allocations: 5817)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 71ms (Views: 70.4ms | ActiveRecord: 0.0ms | Allocations: 11943)
+
+
+Started POST "/tickets" for 127.0.0.1 at 2020-11-21 13:53:47 +0200
+Processing by TicketsController#create as HTML
+  Parameters: {"authenticity_token"=>"8/ii7LCrouKsejsNX7DxqecD2y1mQK3t1ScoUnFxdzoaRUh5O32MuLdK1qnhiaOhBCGSoxPOYHXFLhCBHXnhFw==", "ticket"=>{"student_id"=>"James", "fault"=>"Lights are malfunctioning in my room"}, "commit"=>"Create Ticket"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tickets_controller.rb:16:in `create'
+  [1m[36mTicket Create (1.1ms)[0m  [1m[32mINSERT INTO "tickets" ("student_id", "fault", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["student_id", "James"], ["fault", "Lights are malfunctioning in my room"], ["created_at", "2020-11-21 11:53:47.367362"], ["updated_at", "2020-11-21 11:53:47.367362"]]
+  ↳ app/controllers/tickets_controller.rb:16:in `create'
+  [1m[35m (143.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tickets_controller.rb:16:in `create'
+Redirected to http://127.0.0.1:3000/tickets/19
+Completed 302 Found in 150ms (ActiveRecord: 145.0ms | Allocations: 2768)
+
+
+Started GET "/tickets/19" for 127.0.0.1 at 2020-11-21 13:53:47 +0200
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:26:in `show'
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 19]]
+  ↳ app/views/tickets/show.html.erb:31
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 19]]
+  ↳ app/views/tickets/show.html.erb:32
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 7.8ms | Allocations: 5838)
+  Rendered tickets/show.html.erb within layouts/application (Duration: 10.9ms | Allocations: 7604)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 68ms (Views: 66.5ms | ActiveRecord: 0.5ms | Allocations: 14266)
+
+
+Started POST "/tickets/19/comments" for 127.0.0.1 at 2020-11-21 13:54:14 +0200
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"1DrlD4dGV1h5751VAIByyNgqQPzIkJriZIBQsWovp2ASqwlKwRWPSRXkHdUK2S97SptxYsL37o/wwAP1GFVu5g==", "comment"=>{"name"=>"Maintenance", "comment"=>"Hi James, please indicate when you will be available so that we can repair the lights"}, "commit"=>"Create Comment", "ticket_id"=>"19"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:6:in `create'
+  [1m[36mComment Create (1.1ms)[0m  [1m[32mINSERT INTO "comments" ("name", "comment", "created_at", "updated_at", "ticket_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Maintenance"], ["comment", "Hi James, please indicate when you will be available so that we can repair the lights"], ["created_at", "2020-11-21 11:54:14.434923"], ["updated_at", "2020-11-21 11:54:14.434923"], ["ticket_id", 19]]
+  ↳ app/controllers/comments_controller.rb:6:in `create'
+  [1m[35m (98.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/tickets/19
+Completed 302 Found in 107ms (ActiveRecord: 100.1ms | Allocations: 3734)
+
+
+Started GET "/tickets/19" for 127.0.0.1 at 2020-11-21 13:54:14 +0200
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:26:in `show'
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 19]]
+  ↳ app/views/tickets/show.html.erb:31
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 19]]
+  ↳ app/views/tickets/show.html.erb:32
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 0.2ms | Allocations: 120)
+  Rendered comments/_form.html.erb (Duration: 6.2ms | Allocations: 5828)
+  Rendered tickets/show.html.erb within layouts/application (Duration: 10.2ms | Allocations: 7767)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 62.4ms | ActiveRecord: 0.5ms | Allocations: 14423)
+
+
+Started POST "/tickets/19/comments" for 127.0.0.1 at 2020-11-21 13:54:38 +0200
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"gCgDLmF5ZNUToioTjrY8eJXp0Rqo6Guyxuhws83PwCtGue9rJyq8xH+pqpOE72HLB1jghKKPH99SqCP3v7UJrQ==", "comment"=>{"name"=>"James", "comment"=>"I will be available at Noon tomorrow. Thanks!\r\n"}, "commit"=>"Create Comment", "ticket_id"=>"19"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:6:in `create'
+  [1m[36mComment Create (1.1ms)[0m  [1m[32mINSERT INTO "comments" ("name", "comment", "created_at", "updated_at", "ticket_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "James"], ["comment", "I will be available at Noon tomorrow. Thanks!\r\n"], ["created_at", "2020-11-21 11:54:38.856391"], ["updated_at", "2020-11-21 11:54:38.856391"], ["ticket_id", 19]]
+  ↳ app/controllers/comments_controller.rb:6:in `create'
+  [1m[35m (115.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/tickets/19
+Completed 302 Found in 124ms (ActiveRecord: 116.7ms | Allocations: 3729)
+
+
+Started GET "/tickets/19" for 127.0.0.1 at 2020-11-21 13:54:39 +0200
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:26:in `show'
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 19]]
+  ↳ app/views/tickets/show.html.erb:31
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 19]]
+  ↳ app/views/tickets/show.html.erb:32
+  Rendered collection of comments/_comment.html.erb [2 times] (Duration: 0.3ms | Allocations: 236)
+  Rendered comments/_form.html.erb (Duration: 4.8ms | Allocations: 5828)
+  Rendered tickets/show.html.erb within layouts/application (Duration: 9.4ms | Allocations: 7901)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 64.1ms | ActiveRecord: 0.4ms | Allocations: 14555)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-21 13:54:46 +0200
+Processing by TicketsController#index as HTML
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY created_at DESC[0m
+  ↳ app/views/tickets/index.html.erb:6
+  Rendered tickets/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 691)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 46.8ms | ActiveRecord: 0.2ms | Allocations: 6933)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2020-11-21 13:54:48 +0200
+Processing by TicketsController#new as HTML
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/_form.html.erb (Duration: 5.0ms | Allocations: 5743)
+  Rendered tickets/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 5817)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 45.8ms | ActiveRecord: 0.0ms | Allocations: 11933)
+
+
+Started POST "/tickets" for 127.0.0.1 at 2020-11-21 13:55:12 +0200
+Processing by TicketsController#create as HTML
+  Parameters: {"authenticity_token"=>"DRi1K4kVmmqIydtdysz9UHz7L86l3ykDKMDI1RevdyjkpV++AsO0MJP5Nvl09a9Yn9lmQNBR5Js4yfAGe6fhBQ==", "ticket"=>{"student_id"=>"Amanda", "fault"=>"My kitchen sink keeps leaking, please assist"}, "commit"=>"Create Ticket"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tickets_controller.rb:16:in `create'
+  [1m[36mTicket Create (22.9ms)[0m  [1m[32mINSERT INTO "tickets" ("student_id", "fault", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["student_id", "Amanda"], ["fault", "My kitchen sink keeps leaking, please assist"], ["created_at", "2020-11-21 11:55:12.819092"], ["updated_at", "2020-11-21 11:55:12.819092"]]
+  ↳ app/controllers/tickets_controller.rb:16:in `create'
+  [1m[35m (79.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tickets_controller.rb:16:in `create'
+Redirected to http://127.0.0.1:3000/tickets/20
+Completed 302 Found in 109ms (ActiveRecord: 102.7ms | Allocations: 2769)
+
+
+Started GET "/tickets/20" for 127.0.0.1 at 2020-11-21 13:55:12 +0200
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:26:in `show'
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 20]]
+  ↳ app/views/tickets/show.html.erb:31
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 20]]
+  ↳ app/views/tickets/show.html.erb:32
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 7.0ms | Allocations: 5838)
+  Rendered tickets/show.html.erb within layouts/application (Duration: 10.5ms | Allocations: 7604)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 61.4ms | ActiveRecord: 0.4ms | Allocations: 14262)
+
+
+Started POST "/tickets/20/comments" for 127.0.0.1 at 2020-11-21 13:55:36 +0200
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"/MHRJc86sWeq4nzovOra5lpKGsPWD7iaeGblTK/5Ke46UD1giWlpdsbp/Gi2s4dVyPsrXdxozPfsJrYI3YPgaA==", "comment"=>{"name"=>"Maintenance", "comment"=>"Apologies Amanda, please let us know when you are available and we will fix the sink"}, "commit"=>"Create Comment", "ticket_id"=>"20"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:6:in `create'
+  [1m[36mComment Create (23.3ms)[0m  [1m[32mINSERT INTO "comments" ("name", "comment", "created_at", "updated_at", "ticket_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Maintenance"], ["comment", "Apologies Amanda, please let us know when you are available and we will fix the sink"], ["created_at", "2020-11-21 11:55:36.266999"], ["updated_at", "2020-11-21 11:55:36.266999"], ["ticket_id", 20]]
+  ↳ app/controllers/comments_controller.rb:6:in `create'
+  [1m[35m (112.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/tickets/20
+Completed 302 Found in 143ms (ActiveRecord: 135.4ms | Allocations: 3736)
+
+
+Started GET "/tickets/20" for 127.0.0.1 at 2020-11-21 13:55:36 +0200
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:26:in `show'
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 20]]
+  ↳ app/views/tickets/show.html.erb:31
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 20]]
+  ↳ app/views/tickets/show.html.erb:32
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 0.2ms | Allocations: 120)
+  Rendered comments/_form.html.erb (Duration: 6.0ms | Allocations: 5828)
+  Rendered tickets/show.html.erb within layouts/application (Duration: 11.3ms | Allocations: 7767)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 62.2ms | ActiveRecord: 0.6ms | Allocations: 14423)
+
+
+Started POST "/tickets/20/comments" for 127.0.0.1 at 2020-11-21 13:55:52 +0200
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"BCscUo50JV55d+21Sa2j/0e2cM4PnOseRva3Il2Fk4/CuvAXyCf9TxV8bTVD9P5M1QdBUAX7n3PStuRmL/9aCQ==", "comment"=>{"name"=>"Amanda", "comment"=>"I am available now and it is urgent"}, "commit"=>"Create Comment", "ticket_id"=>"20"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:6:in `create'
+  [1m[36mComment Create (1.3ms)[0m  [1m[32mINSERT INTO "comments" ("name", "comment", "created_at", "updated_at", "ticket_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Amanda"], ["comment", "I am available now and it is urgent"], ["created_at", "2020-11-21 11:55:52.691868"], ["updated_at", "2020-11-21 11:55:52.691868"], ["ticket_id", 20]]
+  ↳ app/controllers/comments_controller.rb:6:in `create'
+  [1m[35m (112.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/tickets/20
+Completed 302 Found in 121ms (ActiveRecord: 113.6ms | Allocations: 3730)
+
+
+Started GET "/tickets/20" for 127.0.0.1 at 2020-11-21 13:55:52 +0200
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:26:in `show'
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 20]]
+  ↳ app/views/tickets/show.html.erb:31
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 20]]
+  ↳ app/views/tickets/show.html.erb:32
+  Rendered collection of comments/_comment.html.erb [2 times] (Duration: 0.3ms | Allocations: 236)
+  Rendered comments/_form.html.erb (Duration: 6.7ms | Allocations: 5828)
+  Rendered tickets/show.html.erb within layouts/application (Duration: 10.7ms | Allocations: 7901)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 60.4ms | ActiveRecord: 0.4ms | Allocations: 14565)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-21 13:55:56 +0200
+Processing by TicketsController#index as HTML
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY created_at DESC[0m
+  ↳ app/views/tickets/index.html.erb:6
+  Rendered tickets/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 738)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 57.2ms | ActiveRecord: 0.2ms | Allocations: 6968)
+
+
+Started GET "/tickets/19" for 127.0.0.1 at 2020-11-21 14:00:14 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:26:in `show'
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 19]]
+  ↳ app/views/tickets/show.html.erb:31
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 19]]
+  ↳ app/views/tickets/show.html.erb:32
+  Rendered collection of comments/_comment.html.erb [2 times] (Duration: 0.8ms | Allocations: 341)
+  Rendered comments/_form.html.erb (Duration: 6.0ms | Allocations: 5884)
+  Rendered tickets/show.html.erb within layouts/application (Duration: 19.4ms | Allocations: 13776)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 75ms (Views: 64.5ms | ActiveRecord: 1.8ms | Allocations: 25167)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-04 15:33:45 +0200
+  [1m[35m (6.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TicketsController#index as HTML
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY created_at DESC[0m
+  ↳ app/views/tickets/index.html.erb:6
+  Rendered tickets/index.html.erb within layouts/application (Duration: 14.6ms | Allocations: 5022)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 346ms (Views: 310.0ms | ActiveRecord: 0.9ms | Allocations: 20453)
+
+
+Started GET "/tickets/20" for 127.0.0.1 at 2020-12-04 15:34:08 +0200
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:26:in `show'
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 20]]
+  ↳ app/views/tickets/show.html.erb:31
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 20]]
+  ↳ app/views/tickets/show.html.erb:32
+  Rendered collection of comments/_comment.html.erb [2 times] (Duration: 8.8ms | Allocations: 738)
+  Rendered comments/_form.html.erb (Duration: 259.4ms | Allocations: 21212)
+  Rendered tickets/show.html.erb within layouts/application (Duration: 371.2ms | Allocations: 34534)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 428ms (Views: 413.7ms | ActiveRecord: 1.0ms | Allocations: 42023)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2020-12-04 15:34:46 +0200
+Processing by TicketsController#new as HTML
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/_form.html.erb (Duration: 10.8ms | Allocations: 6351)
+  Rendered tickets/new.html.erb within layouts/application (Duration: 14.2ms | Allocations: 6659)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 67.6ms | ActiveRecord: 0.0ms | Allocations: 12944)
+
+
+Started POST "/tickets" for 127.0.0.1 at 2020-12-04 15:34:54 +0200
+Processing by TicketsController#create as HTML
+  Parameters: {"authenticity_token"=>"ahpXUaYsbA8qdQxc9TiNlEQDIMTLPe1Y6MlBNjKZ7Ez4r1IXG2K499Aqc3GXi44Xri418D5F6hLhhVOFZdX3+w==", "ticket"=>{"student_id"=>"bhjbk", "fault"=>"ghijhbjkhnjkhk"}, "commit"=>"Create Ticket"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tickets_controller.rb:16:in `create'
+  [1m[36mTicket Create (1.2ms)[0m  [1m[32mINSERT INTO "tickets" ("student_id", "fault", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["student_id", "bhjbk"], ["fault", "ghijhbjkhnjkhk"], ["created_at", "2020-12-04 13:34:54.825888"], ["updated_at", "2020-12-04 13:34:54.825888"]]
+  ↳ app/controllers/tickets_controller.rb:16:in `create'
+  [1m[35m (257.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tickets_controller.rb:16:in `create'
+Redirected to http://127.0.0.1:3000/tickets/21
+Completed 302 Found in 265ms (ActiveRecord: 258.9ms | Allocations: 3070)
+
+
+Started GET "/tickets/21" for 127.0.0.1 at 2020-12-04 15:34:55 +0200
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:26:in `show'
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 21]]
+  ↳ app/views/tickets/show.html.erb:31
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."ticket_id" = ?[0m  [["ticket_id", 21]]
+  ↳ app/views/tickets/show.html.erb:32
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 6.8ms | Allocations: 5947)
+  Rendered tickets/show.html.erb within layouts/application (Duration: 15.2ms | Allocations: 7719)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 78ms (Views: 75.2ms | ActiveRecord: 0.6ms | Allocations: 14391)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-04 15:35:01 +0200
+Processing by TicketsController#index as HTML
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY created_at DESC[0m
+  ↳ app/views/tickets/index.html.erb:6
+  Rendered tickets/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 798)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 68.4ms | ActiveRecord: 0.2ms | Allocations: 7066)
+
+
