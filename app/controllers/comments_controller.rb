@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
 
     def destroy
         @ticket=Ticket.find(params[:ticket_id])
-        @comments = @ticket.comments.find(params[:id])
+        @comment = @ticket.comments.find(params[:id])
         @comment.destroy
         redirect_to ticket_path(@ticket)
     end
