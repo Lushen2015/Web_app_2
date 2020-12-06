@@ -6,8 +6,7 @@ document.addEventListener("turbolinks:load", (event) => {
   const burgerMenu = document.getElementById("burger-menu");
   const targetId = burgerMenu.getAttribute("data-target");
   const targetMenu = document.getElementById(targetId);
-  
-  alert("domcontentloaded")
+
   burgerMenu.addEventListener("click", ()=>{
     targetMenu.classList.toggle("is-active");
   });  
